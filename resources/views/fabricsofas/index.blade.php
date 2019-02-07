@@ -3,7 +3,7 @@
 <main role="main">
 
     <div class="jumbotron p-3 p-md-5 text-black background">
-       <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.</p>
+  
     </div>
 
     <div class="album py-5 bg-light">

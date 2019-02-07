@@ -176,7 +176,7 @@
   
       <!-- /END THE FEATURETTES -->
   
-    </div><!-- /.container -->
+ 
   
   
     <!-- FOOTER -->

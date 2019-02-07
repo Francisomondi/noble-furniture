@@ -22,6 +22,7 @@
             <a href="fabricsofas/create"  class="list-group-item list-group-item-info">ADD FABRIC SOFA</a>
             <a href="/carbinets/create"  class="list-group-item list-group-item-light">ADD TV CARBINET</a>
             <a href="/furnituregallery/create" class="list-group-item list-group-item-danger">Create a gallery</a>
+            <a href="/inquiry" class="list-group-item list-group-item-danger">view inquiries</a>
             
           </div>
 </div>

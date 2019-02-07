@@ -5,67 +5,42 @@
     <div class="jumbotron p-3 p-md-5 text-black background">
         </div>
 
-    <div class="album py-5 bg-light">
+   
         <div class="container">
-          
-        <div class="row" >
-                @if(count($inquiries)>0)
-
-                @foreach($inquiries as $inquiry)
-            
-                <div class="col-md-4">
-                    <div class="card mb-3 shadow-sm" >
-                        <h3 style="text-align:center;">{{$inquiry->fullname}}</h3>
-                        
-                        <a href="/inquiry/{{$inquiry->id}}">
-                        <img src="/storage/photos/inquiry/{{$inquiry->image}}" alt="leather seat" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"  rect fill="#55595c" width="100%" height="100%"/>
+           
+           
+                   <div class="list-group">
+                     
+                     
+                        <a href="#" class="list-group-item active">
+                          List of Inquiries
                         </a>
-                          <div class="card-body">
-                                <p class="card-text">{{$inquiry->inquiry}}</p>
-                                <p class="card-text" >{{$inquiry->phone}}</p>
-                              
-                                <div class="d-flex justify-content-between align-items-center">
-                                      <div class="btn-group">
-                                          <a href="/inquiry/{{$inquiry->id}}"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
-                                          <a href="/inquiry/{{$inquiry->id}}/edit"><button type="button" class="btn btn-sm btn-outline-secondary">Edit</button></a>
-                                      
-                                      </div>
-                                    
-                                    <small class="text-muted">{{$inquiry->created_at->diffForHumans()}}</small>
-                                    <small class="text-muted">{{$inquiry->condition}}</small>
-                                </div>
-                          </div>
+                        @if(count($inquiries)>0)
 
-                    </div>
-                      
-        </div>
-              @endforeach
+                        @foreach($inquiries as $inquiry)
+                        <a href="/inquiry/{{$inquiry->id}}" class="list-group-item">{{$inquiry->fullname}}</a>
+                        
+                     </div>
+                     @endforeach
               
 
               @else
                 <p>No inquiries found</p>
               
               @endif      
-              
-          </div>
+            </div>
+          
           
               {{$inquiries->links()}}
               <a class="btn btn-sm btn-outline-secondary" style="float:left" href="/" role="button">Back
                 &raquo;</a>
-          </div>
+        
          
          
    
    
 
-</div>
-
-    
   
-   
-  
-  
-     
   
 <hr class="featurette-divider">
   
