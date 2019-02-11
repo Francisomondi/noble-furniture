@@ -2,11 +2,9 @@
 @section('content')
 <main role="main">
 
-    <div class="jumbotron p-3 p-md-5 text-black background">
-        </div>
-
-   
         <div class="container">
+            <hr class="featurette-divider">
+            <div class="container">
            
            
                    <div class="list-group">
@@ -29,6 +27,8 @@
               
               @endif      
             </div>
+          </div>
+</main>
           
           
               {{$inquiries->links()}}

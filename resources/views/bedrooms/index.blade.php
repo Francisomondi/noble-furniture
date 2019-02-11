@@ -2,8 +2,53 @@
 @section('content')
 <main role="main">
 
-    <div class="jumbotron p-3 p-md-5 text-black background">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active">      
+          </li>
+          <li data-target="#myCarousel" data-slide-to="1"> </li>
+             
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+             <img src="/images/in.jpg" alt="leather seat" class="bd-placeholder-img" width="100%" height="50%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" rect fill="#777" width="100%" height="50%"/>
+           
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h1>Transform Your Home With Our quality Oval Dinning Designs.</h1>
+  
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+                  <img src="/images/ajj.jpg" alt="furniture image" class="bd-placeholder-img" width="100%" height="50%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" rect fill="#777" width="100%" height="50%"/>
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Compliment Your Home's Dinning Room with Customized Round six seater's Otis de Furniture quality Dinning brands.</h1>
+        
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+                  <img src="/images/aii.jpg" alt="leather seat" class="bd-placeholder-img" width="100%" height="50%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" rect fill="#777" width="100%" height="50%"/>
+            <div class="container">
+              <div class="carousel-caption text-right">
+                <h1>DESIGN YOUR DREAM DINNING WITH OTIS DE FURNITURE BEST SQUARE DINNING DESIGNS .</h1>
+               
+              </div>
+            </div>
+          </div>
         </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
 
     <div class="album py-5 bg-light">
         <div class="container">
@@ -27,7 +72,12 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                       <div class="btn-group">
                                           <a href="/bedrooms/{{$bedroom->id}}"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+
+                                          @if(!Auth::guest())
+                                          @if(Auth::user()->id == $bedrooms->user_id)
                                           <a href="/bedrooms/{{$bedroom->id}}/edit"><button type="button" class="btn btn-sm btn-outline-secondary">Edit</button></a>
+                                          @endif
+                                          @endif
                                       
                                       </div>
                                     
@@ -43,7 +93,7 @@
               
 
               @else
-                <p>No bedrooms found</p>
+                <p>No Dinnings found</p>
               
               @endif      
               
@@ -70,51 +120,49 @@
 <hr class="featurette-divider">
   
 <div class="my-3 p-3 bg-white rounded shadow-sm">
-      <h5 class="border-bottom border-gray pb-2 mb-0">Contac Us</h5>
-      <div class="media text-muted pt-3">
-        <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32"  preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect fill="#007bff" width="100%" height="100%"/><text fill="#007bff" dy=".3em" x="50%" y="50%">32x32</text></svg>
-        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-          <strong class="d-block text-gray-dark">@Telephone</strong>
-          0727 358 045<br>
-          0792537308
-        </p>
-      </div>
-      <div class="media text-muted pt-3">
-        <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect fill="#e83e8c" width="100%" height="100%"/><text fill="#e83e8c" dy=".3em" x="50%" y="50%">32x32</text></svg>
-        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-          <strong class="d-block text-gray-dark">@E-mail</strong>
-          Info@noblefurtures.co.ke <br>
-          Noblefurtures@gmail.com
-      
-        </p>
-      </div>
-      <div class="media text-muted pt-3">
-              <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect fill="#e83e8c" width="100%" height="100%"/><text fill="#e83e8c" dy=".3em" x="50%" y="50%">32x32</text></svg>
-              <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                <strong class="d-block text-gray-dark">@Social-media</strong>
-               Facebook: <a href="www.facebook.com/noblefurniture">Noble Furnitures  </a><br>
-               Instagram: <a href="instagram.com/noblefurniture">Noble_Furnitures  </a><br>
-               Twitter: <a href=" www.twitter.com/noblefurniture">@Noble_Furnitures  </a><br>
-               <br>
-              
-            
-              </p>
-            </div>
-      <div class="media text-muted pt-3">
-        <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32"  role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect fill="#6f42c1" width="100%" height="100%"/><text fill="#6f42c1" dy=".3em" x="50%" y="50%">32x32</text></svg>
-        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-          <strong class="d-block text-gray-dark">@postal address</strong>
-          B.O.Box 0771-00518
-          <small class="d-block  mt-3">
-                 Mbotela Makadara Along jogoo Road<br>
-                          Left turn to Town Before Foot Bridge
-          </small>
-         
-        </p>
-      </div>
+  <h5 class="border-bottom border-gray pb-2 mb-0">Contac Us</h5>
+  <div class="media text-muted pt-3">
+    <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32"  preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect fill="#007bff" width="100%" height="100%"/><text fill="#007bff" dy=".3em" x="50%" y="50%">32x32</text></svg>
+    <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+      <strong class="d-block text-gray-dark">@Telephone</strong>
+      0720868509<br>
+    </p>
+  </div>
+  <div class="media text-muted pt-3">
+    <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect fill="#e83e8c" width="100%" height="100%"/><text fill="#e83e8c" dy=".3em" x="50%" y="50%">32x32</text></svg>
+    <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+      <strong class="d-block text-gray-dark">@E-mail</strong>
+      Info@otisdefurniture.co.ke <br>
+      Otisauko@gmail.com
+  
+    </p>
+  </div>
+  <div class="media text-muted pt-3">
+          <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect fill="#e83e8c" width="100%" height="100%"/><text fill="#e83e8c" dy=".3em" x="50%" y="50%">32x32</text></svg>
+          <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <strong class="d-block text-gray-dark">@Social-media</strong>
+           Facebook: <a href="www.facebook.com/noblefurniture">OTIS DE FURNITURE  </a><br>
+           Instagram: <a href="instagram.com/noblefurniture">Otis_De_Furniture  </a><br>
+           Twitter: <a href=" www.twitter.com/noblefurniture">@Otis_de_Furnitures  </a><br>
+           <br>
+          
+        
+          </p>
+        </div>
+  <div class="media text-muted pt-3">
+    <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32"  role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect fill="#6f42c1" width="100%" height="100%"/><text fill="#6f42c1" dy=".3em" x="50%" y="50%">32x32</text></svg>
+    <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+      <strong class="d-block text-gray-dark">@postal address</strong>
+      B.O.Box 7778-00300 Nrb
+      <strong class="d-block  mt-3">
+             Jogoo Road<br>
+             Mboya Hall
+      </strong>
      
-    </div>
-
+    </p>
+  </div>
+ 
+</div>
 <hr class="featurette-divider">
   
   
